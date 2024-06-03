@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Error Document{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+</head>
+<body style="overflow-y: hidden;">
+    <div class="errorbg">
+        <h3>{% block header %}Page Error{% endblock %}</h3>
+        <p>{% block paragraph %}Missing Page or didn't exists at all{% endblock %}</p>
+        <br>
+        <a class="btn" href="{% url 'aboutme' %}">Go Back</a>
+    </div>
+</body>
+</html>

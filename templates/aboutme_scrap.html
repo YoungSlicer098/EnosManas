@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Leon | About Me</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="title-container">
+        <div class="title-container-section">
+            <h2 id="title">Get to know</h2>
+            <h2 id="title">Daniel Vian!</h2>
+        </div>
+        <div class="title-container-section">
+            <img id="myImage" src="{% static 'img/deleon_colored.png' %}" alt="De Leon Sketch">
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="spacer wave1"></div>
+    <section class="blue">
+        <h1>Introduction</h1>
+        <p>Greetings! I go by De Leon, Daniel Vian A. and I am presently enrolled at the esteemed Technological
+            University of the Philippines. My academic pursuit revolves around the intriguing blend of teaching and
+            computer programming in the BTVTED-CP-2A program. I must say, I find this combination rather delightful as I
+            firmly believe that learning is an everlasting adventure that refuses to hit the pause button.</p>
+        <img class="frame" src="{% static 'img/introduction.jpg' %}">
+    </section>
+    <div class="spacer wave2"></div>
+    <section class="black">
+        <h1>Currently Doing</h1>
+        <p>At the moment, my days are filled with mastering programming languages and acquiring new skills. Juggling
+            school assignments keeps me on my toes, but the challenge is definitely rewarding. I'm on a quest to enhance
+            my time management skills, boost productivity, and outsmart the sneaky temptations of procrastination.</p>
+            <img class="frame" src="{% static 'img/currently doing.jpg' %}">
+    </section>
+    <div class="spacer wave3"></div>
+    <section class="red">
+        <h1>My Passion</h1>
+        <p>I find the idea of balancing roles in Game Development, Software Engineering, or Computer Engineering quite
+            exciting. While I understand this journey will demand significant time and effort, my motto remains
+            'learning is an eternal adventure,' and I am committed to realizing my aspirations. Additionally, gaming is
+            not just a pastime for me; I envision simplifying my daily routine by crafting software solutions to
+            streamline my life.</p>
+            <img class="frame" src="{% static 'img/gamedevelopment.png' %}">
+    </section>
+    <div class="spacer wave4"></div>
+    <section class="green">
+        <h1>My Biggest Accomplishment</h1>
+        <p>My partner and I have crafted a MacroGameplay software (an autoclicker with keyboard functions) that I take
+            pride in. Despite encountering a few bugs, the core idea is functional and ripe for enhancements. One day, I
+            aim to polish this project to perfection and share it with the public.</p>
+            <img class="frame" src="{% static 'img/achievement.png' %}">
+    </section>
+    <div class="spacer wave5"></div>
+    <section class="blue2">
+        <h1>What I am looking for.</h1>
+        <p>I am actively seeking game development and software engineering projects to gain valuable experience in
+            preparation for future career opportunities. If you have a project that aligns with my goals, I am keenly
+            interested and excited to take on the challenge. Please feel free to contact me at danielviandeleon@gmail.com 
+            to discuss potential collaborations!</p>
+            <div class="linklogo">
+                <a href="https://www.facebook.com/YoungSlicer/" target="_blank">
+                    <img src="{% static 'img/Facebook.png' %}" alt="Facebook Logo">
+                </a>
+                <a href="https://www.linkedin.com/in/daniel-vian-de-leon-71a40a1a3/" target="_blank">
+                    <img src="{% static 'img/LinkedIn.png' %}" alt="LinkedIn Logo">
+                </a>
+            </div>
+    </section>
+    <div class="spacer wave6"></div>
+    <section class="comment-area black2">
+        <h1 id="comment-text">Comments({{posts.comments.all.count}})...</h1>
+        <hr>
+        {% if not posts.comments.all %}
+            <h3>Wow such empty :O</h3>
+        {% else %}
+            {% for comments in posts.comments.all %}
+                <h3 id="commenth3-{{comments.id}}">{{comments.name}} - <small>{{comments.date_added}}</small></h3> 
+                <div id="commentdiv-{{comments.id}}" style="width: 98%;background-color: #2f3b4bb0; padding: 10px 0px 10px 5px;margin: 0px 0px 0px 5px;border-radius: 10px;">
+                    <p id="commentp-{{comments.id}}" style="font-size: 15px;text-align: left;margin: 0px 5px 0px 5px;">{{comments.body}}</p>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <button class="reply" type="submit" name="Reply" value="{{comments.id}}" onclick='scrollReply();'>⤷ Reply</button>
+                </form>
+                {% for reply in comments.replies.all%}
+                <div style="width: 93.4%;background-color: transparent; padding: 0px;margin: 0px 0px 0px 60px;border-radius: 10px;">
+                    <h3 id="replyh3-{{reply.id}}">{{reply.name}} - <small>{{reply.date_added}}</small></h3> 
+                    <div id="replydiv-{{reply.id}}" style="width: 100%;background-color: #2f3b4bb0; padding: 10px 0px 10px 5px;margin: 0px 0px 0px 5px;border-radius: 10px;">
+                        <p id="replyp-{{reply.id}}" style="font-size: 15px;text-align: left;margin: 0px 5px 0px 5px;">{{reply.reply}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endfor %}
+        {% endif%}
+        <hr>
+        {% if reply == True %}
+        <h2>Reply to {{comment_id.name}}</h2>
+        <form method="post" id="reply_form">
+            {% csrf_token %}
+            <h3>Name:</h3>
+            {{ reply_form.name }}
+            <h3>Reply:</h3>
+            {{ reply_form.reply }}
+            <br>
+            <button id="id_rsubmit" style="padding: 5px 15px 5px 15px; margin: 3px; background-color: #3b7cb9;font-family: 'Heebo', sans-serif;color: #ffffff;font-size: 15px;border: #1fb5cf 2px solid;border-radius:10px;" type="submit" name="Submit" value="{{comment_id.id}}">Submit</button>
+        </form>
+        <form method="post">
+            {% csrf_token %}
+            <button id="id_rcancel" style="padding: 5px 15px 5px 15px; margin: 3px; background-color: #9c9c9c;font-family: 'Heebo', sans-serif;color: #ffffff;font-size: 15px;border: #494949 2px solid;border-radius:10px;" type="submit" name="Cancel" value="{{comment_id.id}}">Cancel</button>
+        </form>
+        {% else %}
+        <h2>Add Comments</h2>
+        <form method="post" id="comment_form">
+            {% csrf_token %}
+            <h3>Name:</h3>
+            {{ comment_form.name }}
+            <h3>Body:</h3>
+            {{ comment_form.body }}
+            <br>
+            <button id="id_csubmit" style="padding: 5px 15px 5px 15px; margin: 3px; background-color: #3b7cb9;font-family: 'Heebo', sans-serif;color: #ffffff;font-size: 15px;border: #1fb5cf 2px solid;border-radius:10px;" type="submit" name="Submit" value="{{comment_id.id}}">Submit</button>
+        </form>
+        {% endif %}
+    </section>
+</body>
+<script src="{% static 'java/script.js' %}"></script>
+
+</html>

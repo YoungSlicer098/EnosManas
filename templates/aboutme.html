@@ -1,0 +1,573 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENOS MANAS</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'img/Logo.png' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Orbitron:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div class="topnav">
+        <img id="logo" src="{% static 'img/EnosManas.png' %}">
+        <div class="navbtn">
+            <a class="nbtn active" href="#home">Home</a>
+            <a class="nbtn" href="#aboutme">About me</a>
+            <a class="nbtn" href="#portfolio">Portfolio</a>
+            <a class="nbtn" href="#contact">Contact</a>
+            <a class="nbtn" href="#comment">Comment</a>
+        </div>
+        <div class="nav-line" style="width: 100px; left: 347px;"></div>
+    </div>
+    <div id="hamburger-container" class="hamburger-container">
+        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+              <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+              <path class="line line2" d="M 20,50 H 80" />
+              <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+          </button>
+    </div>
+    <div class="sidenav">
+        <img id="logo" src="{% static 'img/EnosManas.png' %}">
+        <div class="sidebtn">
+            <a class="sbtn active" href="#home">Home</a>
+            <a class="sbtn" href="#aboutme">About me</a>
+            <a class="sbtn" href="#portfolio">Portfolio</a>
+            <a class="sbtn" href="#contact">Contact</a>
+            <a class="sbtn" href="#comment">Comment</a>
+            <div class="side-line" style="height: 22px; top: 40px;"></div>
+        </div>
+
+    </div>
+    <div id="home" class="space-home"></div>
+    <section class="title-container">
+        <img src="{% static 'img/Frameline.png' %}" id="frameline">
+        <img src="{% static 'img/Lady.png' %}" id="lady">
+        <h2 id="title">ENOS MANAS:</h2>
+        <h2 id="sub-title">Where Man Meets Mind</h2>
+        </div>
+        </div>
+    </section>
+    <section class="floaty">
+        <ul id="shape">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    <div class="spacer">
+        <img src="{% static 'svg/purple-blue1.svg' %}" class="wavy wave1">
+        <img src="{% static 'svg/purple-blue2.svg' %}" class="wavy wave2">
+        <img src="{% static 'svg/purple-blue3.svg' %}" class="wavy wave3">
+        <img src="{% static 'svg/purple-blue4.svg' %}" class="wavy wave4">
+        <img src="{% static 'svg/purple-blue5.svg' %}" class="wavy wave5">
+    </div>
+    <section class="blue" id="aboutme">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h2 class="cs-title">About Me</h2>
+                <div class="tab-box">
+                    <button class="tab-btn active">Introduction</button>
+                    <button class="tab-btn">Achievement</button>
+                    <button class="tab-btn">Skills</button>
+                    <button class="tab-btn">Education</button>
+                    <div class="tab-line"></div>
+                </div>
+                <div class="content-box">
+                    <div class="content active">
+                        <h2>Introduction</h2>
+                        <p>
+                            Greetings! I go by De Leon, Daniel Vian A. and I am presently enrolled at the esteemed Technological University of the Philippines.
+                            My academic pursuit revolves around the intriguing blend of teaching and computer programming
+                            in the BTVTED-CP-2A program. I must say, I find this combination rather delightful as I firmly
+                            believe that learning is an everlasting adventure that refuses to hit the pause button.
+                        </p>
+                    </div>
+                    <div class="content achievement">
+                        <h2>Academic Achievements & Awards</h2>
+                        <ul>
+                            <li>
+                                <b>Honor</b> Grade 12 SHS CIHS</li>
+                            <li>
+                                <b>Scolastic's Award</b> 1st Year 22-23 TUPC</li>
+                            <li>
+                                <b>President's Lister</b> 1st Sem 2023 TUPC</li>
+                        </ul>
+                    </div>
+                    <div class="content skill">
+                        <h2>Skills</h2>
+                        <ul>
+                            <b>Hard Skills:</b>
+                            <li>
+                                <b>Computer Programming</b>
+                            </li>
+                            <ul>
+                                <li>Web Development:
+                                    <ul>
+                                        <li>HTML: 1 year Exp</li>
+                                        <li>CSS: 1 year Exp</li>
+                                        <li>Javascript: 1 year Exp</li>
+                                        <li>Django: 1 year Exp</li>
+                                    </ul>
+                                </li>
+                                <li>Software Development
+                                    <ul>
+                                        <li>Python: 1 year Exp</li>
+                                        <li>PyQt5: 1 year Exp</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </ul>
+                        <ul>
+                            <b>Soft Skills:</b>
+                            <li>Problem Solving</li>
+                            <li>Critical Thinking</li>
+                            <li>Active Listening</li>
+                            <li>Adaptability</li>
+                            <li>Attention to Detail</li>
+                            <li>Teamwork</li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="content education">
+                        <h2>Education</h2>
+                        <ul>
+                            <li>
+                                <b>Thinking Learn Learning Center Inc.</b>
+                                <br>Preschool</li>
+                            <li>
+                                <b>Prime Masters Academy</b>
+                                <br>Elementary (Grade 1-6)</li>
+                            <li>
+                                <b>Fiat Lux Academe</b>
+                                <br>Junior HighSchool (Grade 7-10)</li>
+                            <li>
+                                <b>Congressional Integrated HighSchool</b>
+                                <br>Senior HighSchool (Grade 11-12)</li>
+                            <li>
+                                <b>Technological University of The Philippines Cavite</b>
+                                <br>1st Year - 2nd Year(Present)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--Left Image Group-->
+            <div class="cs-image-group">
+                <!--Faded Paint Splash-->
+                <img class="cs-splash" src="{% static 'svg/blue-splash.svg' %}" aria-hidden="true" loading="lazy"
+                    decoding="async" alt="splash icon" width="570" height="586">
+
+                <!--Blue Blob-->
+                <img class="cs-blob" src="{% static 'svg/blob.svg' %}" aria-hidden="true" loading="lazy"
+                    decoding="async" alt="blob icon" width="392" height="497">
+
+                <!--Lightning Bolt-->
+                <img class="cs-lightning" src="{% static 'svg/lightning.svg' %}" aria-hidden="true" loading="lazy"
+                    decoding="async" alt="lightning icon" width="392" height="497">
+
+                <!--Left Circle Image-->
+                <picture class="cs-left-image">
+                    <source media="(max-width: 600px)" src="{% static 'img/DeLeon_1.jpg' %}">
+                    <source media="(min-width: 601px)" src="{% static 'img/DeLeon_1.jpg' %}">
+                    <img loading="lazy" decoding="async" src="{% static 'img/DeLeon_1.jpg' %}" alt="Its me" width="211" height="211" aria-hidden="true">
+                </picture>
+                <!--Bottom Circle Image-->
+                <picture class="cs-bottom-image">
+                    <source media="(max-width: 600px)" src="{% static 'img/DeLeon_3.jpg' %}">
+                    <source media="(min-width: 601px)" src="{% static 'img/DeLeon_3.jpg' %}">
+                    <img loading="lazy" decoding="async" src="{% static 'img/DeLeon_3.jpg' %}" alt="Its me" width="180" height="180" aria-hidden="true">
+                </picture>
+                <!--Main Person Image-->
+                <!--To make your own crops of people, use https://www.remove.bg/ to remove the background of any image-->
+                <picture class="cs-person">
+                    <source media="(max-width: 600px)" src="{% static 'img/deleon_colored.png' %}">
+                    <source media="(min-width: 601px)" src="{% static 'img/deleon_colored.png' %}">
+                    <img loading="lazy" decoding="async" src="{% static 'img/deleon_colored.png' %}" alt="Its me" width="386" height="521" aria-hidden="true">
+                </picture>
+                <!--Masking SVG to cover the bottom of the person image-->
+                <svg class="cs-mask" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 383 173">
+                    <path d="M0 131.021c0-29.542.317-41.863 1.067-41.4.587.363.983.052.881-.69-.502-3.66.132-4.85 2.583-4.85 2.264 0 2.507.363 2.3 3.447-.183 2.714.343 3.902 2.474 5.577 1.488 1.17 3.346 2.77 4.129 3.552.783.783 1.85 1.423 2.372 1.423.522 0 1.51.675 2.194 1.5.685.825 2.262 1.5 3.506 1.5 1.447 0 2.456.747 2.803 2.074.298 1.141 1.476 2.319 2.617 2.617 1.14.298 2.074.868 2.074 1.265 0 1.176 4.868 3.044 7.93 3.044 2.055 0 3.042.62 3.58 2.25l.744 2.25.442-2.25c.314-1.595 1.15-2.25 2.874-2.25 2.095 0 2.43.467 2.43 3.384 0 3.984 1.935 4.861 8.687 3.936 3.861-.53 4.313-.38 4.313 1.437 0 2.581 2.158 3.402 6.935 2.638 3.15-.504 3.859-.292 4.269 1.277.405 1.55 2.677 2.273 12.894 4.103 18.887 3.384 38.907 4.572 54.402 3.23 7.15-.62 15.475-1.296 18.5-1.503 13.731-.938 35.155-5.125 36.708-7.175.867-1.145 2.091-1.417 4.343-.967 2.97.594 20.732-3.208 24.769-5.301.924-.48 3.572-1.376 5.885-1.992 2.313-.616 4.869-1.783 5.679-2.594.81-.81 3.08-1.473 5.045-1.473 2.36 0 3.571-.465 3.571-1.372 0-.828 1.587-1.626 4-2.012 2.588-.414 4-1.165 4-2.128 0-1.034 1.068-1.488 3.5-1.488 1.925 0 3.5-.45 3.5-1s.879-1 1.953-1c2.39 0 7.047-2.038 7.047-3.083 0-.419 1.688-1.27 3.75-1.89 7.21-2.17 13.218-5.473 13.234-7.277.012-1.33.855-1.75 3.516-1.75 1.925 0 3.5-.45 3.5-1s.469-1 1.042-1c.573 0 1.586-.454 2.25-1.01.664-.555 4.583-3.598 8.708-6.76 10.945-8.394 18.178-16.216 25.328-27.393 3.004-4.696 3.488-6.198 2.988-9.277-.506-3.116-.29-3.754 1.422-4.202 2.287-.598 4.262-4.26 4.262-7.905 0-1.349.4-2.453.888-2.453.999 0 5.23-20.999 4.478-22.217-.266-.43.244-.783 1.134-.783.89 0 1.34-.45 1-1-.404-.653 6.156-1 18.941-1H383v173H0Zm18-35.44c0-2 .5-2.5 2.5-2.5s2.5.5 2.5 2.5-.5 2.5-2.5 2.5-2.5-.5-2.5-2.5z"
+                        fill="#fff" />
+                </svg>
+            </div>
+        </div>
+    </section>
+    <div class="spacer" style="background-color: #2224ad;">
+        <img src="{% static 'svg/blue-red2.svg' %}" class="wavy wave2">
+        <img src="{% static 'svg/blue-red3.svg' %}" class="wavy wave3">
+        <img src="{% static 'svg/blue-red4.svg' %}" class="wavy wave4">
+        <img src="{% static 'svg/blue-red5.svg' %}" class="wavy wave5">
+    </div>
+    <section class="red" id="portfolio">
+        <h1>My Portfolio</h1>
+        <p>Explore my portfolio to witness a fusion of skills, creativity, and innovative ideas brought to life through my work.
+            Each project is a testament to my dedication and passion for crafting unique and impactful creations.
+        </p>
+
+        <div class="gallery-container">
+            <div class="gallery-box">
+                <button class="gallery-btn active">All</button>
+                <button class="gallery-btn">Art</button>
+                <button class="gallery-btn">Software</button>
+                <button class="gallery-btn">Web Dev</button>
+                <div class="gallery-line"></div>
+            </div>
+            <div class="gallery active">
+                <div class="portfolio">
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/art_1.png' %}">
+                        <div class="content">
+                            <h2>Movie Poster Recreation:</h2>
+                            <p>My attempt on revising Wall-E poster.</p>
+                        </div>
+                    </div>
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/art_3.jfif' %}">
+                        <div class="content">
+                            <h2>Painting a painter:</h2>
+                            <p>Painting my favorite painter with our own twist and style. Pablo Picasso is a guy with many talents
+                                who keeps experimenting and innovating his art style.</p>
+                        </div>
+                    </div>
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/art_4.png' %}">
+                        <div class="content">
+                            <h2>Birthday Card:</h2>
+                            <p>Invitation card for people I want to invite and to challenge my creativity to make my own cards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio">
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/art_5.png' %}">
+                        <div class="content">
+                            <h2>My Hobby:</h2>
+                            <p>A visual representation of what I do in my free time.</p>
+                        </div>
+                    </div>
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/prog_1.png' %}">
+                        <div class="content">
+                            <h2>Macro Gaming V1:</h2>
+                            <p>My first software application with a complete working functionality. New features coming soon!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/prog_2.png' %}">
+                        <div class="content">
+                            <h2>Attendance Checker V1:</h2>
+                            <p>Currently in progress! This target of this program is the teachers to use to easily keep up with
+                                their students' attendance.</p>
+                        </div>
+                    </div>
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/web_1.png' %}">
+                        <div class="content">
+                            <h2>Erebus:</h2>
+                            <p>My first cool looking website with a theme.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio">
+
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/art_2.png' %}">
+                        <div class="content">
+                            <h2>The Need For Artists:</h2>
+                            <p>This is my opinion towards why artists are still relevant today and why they are needed for the
+                                current era.</p>
+                        </div>
+                    </div>
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/web_2.png' %}">
+                        <div class="content">
+                            <h2>Portfolio Website for Prog1&2:</h2>
+                            <p>This is one of my favorite project for a portfolio, it also contain my favorite anime as a theme.</p>
+                        </div>
+                    </div>
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/web_3.png' %}">
+                        <div class="content">
+                            <h2>Graphamere:</h2>
+                            <p>This is a project that requires using django as a main features with authentication to be more
+                                familiar with the environment of working as a back-end developer.</p>
+                        </div>
+                    </div>
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/web_4.png' %}">
+                        <div class="content">
+                            <h2>Enos Manas Reflection Portfolio:</h2>
+                            <p>This is my reflection for TTL2 (Technology for Teacher and Learning). I got my inspiration for
+                                my naming from one of the novels I read.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <div class="portfolio">
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/art_1.png' %}">
+                        <div class="content">
+                            <h2>Movie Poster Recreation:</h2>
+                            <p>My attempt on revising Wall-E poster.</p>
+                        </div>
+                    </div>
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/art_5.png' %}">
+                        <div class="content">
+                            <h2>My Hobby:</h2>
+                            <p>A visual representation of what I do in my free time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio">
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/art_3.jfif' %}">
+                        <div class="content">
+                            <h2>Painting a painter:</h2>
+                            <p>Painting my favorite painter with our own twist and style. Pablo Picasso is a guy with many talents
+                                who keeps experimenting and innovating his art style.</p>
+                        </div>
+                    </div>
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/art_4.png' %}">
+                        <div class="content">
+                            <h2>Birthday Card:</h2>
+                            <p>Invitation card for people I want to invite and to challenge my creativity to make my own cards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio">
+
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/art_2.png' %}">
+                        <div class="content">
+                            <h2>The Need For Artists:</h2>
+                            <p>This is my opinion towards why artists are still relevant today and why they are needed for the
+                                current era.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="portfolio row-2">
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/prog_1.png' %}">
+                        <div class="content">
+                            <h2>Macro Gaming V1:</h2>
+                            <p>My first software application with a complete working functionality. New features coming soon!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio row-2">
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/prog_2.png' %}">
+                        <div class="content">
+                            <h2>Attendance Checker V1:</h2>
+                            <p>Currently in progress! This target of this program is the teachers to use to easily keep up with
+                                their students' attendance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="portfolio">
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/web_3.png' %}">
+                        <div class="content">
+                            <h2>Graphamere:</h2>
+                            <p>This is a project that requires using django as a main features with authentication to be more
+                                familiar with the environment of working as a back-end developer.</p>
+                        </div>
+                    </div>
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/web_4.png' %}">
+                        <div class="content">
+                            <h2>Enos Manas Reflection Portfolio:</h2>
+                            <p>This is my reflection for TTL2 (Technology for Teacher and Learning). I got my inspiration for
+                                my naming from one of the novels I read.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio">
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/web_1.png' %}">
+                        <div class="content">
+                            <h2>Erebus:</h2>
+                            <p>My first cool looking website with a theme.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio">
+                    <div class="animated_card">
+                        <img src="{% static 'portfolio/web_2.png' %}">
+                        <div class="content">
+                            <h2>Portfolio Website for Prog1&2:</h2>
+                            <p>This is one of my favorite project for a portfolio, it also contain my favorite anime as a theme.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="spacer" style="background-color: #a32e27;">
+        <img src="{% static 'svg/red-lightblue2.svg' %}" class="wavy wave2">
+        <img src="{% static 'svg/red-lightblue3.svg' %}" class="wavy wave3">
+        <img src="{% static 'svg/red-lightblue4.svg' %}" class="wavy wave4">
+        <img src="{% static 'svg/red-lightblue5.svg' %}" class="wavy wave5">
+    </div>
+    <section class="blue2" id="contact">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Contact Me</span>
+            <h2 class="cs-title">Get in Touch</h2>
+            <p class="cs-text">
+                We are a team of passionate and creative individuals dedicated to crafting captivating designs that leave a lasting impression.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="{% static 'svg/phone-76.svg' %}" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Phone</span>
+                        <a href="tel:+63 9396-111-191" class="cs-link">+63 9396 111 191</a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="{% static 'svg/mail-76.svg' %}" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Email</span>
+                        <a href="mailto:danielviandeleon@gmail.com" class="cs-link">danielviandeleon@gmail.com</a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true" src="{% static 'svg/pin-76.svg' %}" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Address</span>
+                        <a href="" class="cs-link">Salitran II, Dasmariñas City, Cavite, Philippines</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Form-->
+        <form class="cs-form" id="cs-form-1388" name="Contact-Form" method="POST" action="">
+            <h3 class="cs-h3">Make Appointment</h3>
+            <label class="cs-label">
+                Name:
+                <input class="cs-input" required type="text" name="contact-name" placeholder="Name">
+            </label>
+            <label class="cs-label cs-email">
+                Email:
+                <input class="cs-input" required type="email" name="contact-email" placeholder="Email">
+            </label>
+            <label class="cs-label cs-phone">
+                Phone:
+                <input class="cs-input" required type="number" name="contact-phone" placeholder="Phone">
+            </label>
+            <label class="cs-label">
+                Message:
+                <textarea class="cs-input cs-textarea" required name="contact-message" placeholder="Write message..."></textarea>
+            </label>
+            <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+        </form>
+    </div>
+    </section>
+    <div class="spacer" style="background-color: #276daf;">
+        <img src="{% static 'svg/lightblue-black2.svg' %}" class="wavy wave2">
+        <img src="{% static 'svg/lightblue-black3.svg' %}" class="wavy wave3">
+        <img src="{% static 'svg/lightblue-black4.svg' %}" class="wavy wave4">
+        <img src="{% static 'svg/lightblue-black5.svg' %}" class="wavy wave5">
+    </div>
+    <section class="comment-area black2" id="comment">
+        <h1 id="comment-text">Comments({{posts.comments.all.count}})...</h1>
+        <hr>
+        <div style="display: flex; width: 80vw; flex-direction: column;">
+        {% if not posts.comments.all %}
+            <h3>Wow such empty :O</h3>
+        {% else %}
+            {% for comments in posts.comments.all %}
+                <h3 id="commenth3-{{comments.id}}">{{comments.name}} - <small>{{comments.date_added}}</small></h3> 
+                <div id="commentdiv-{{comments.id}}" style="width: 98%;background-color: #2f3b4bb0; padding: 10px 0px 10px 5px;margin: 0px 0px 0px 5px;border-radius: 10px;">
+                    <p id="commentp-{{comments.id}}" style="font-size: 15px;text-align: left;margin: 0px 5px 0px 5px;">{{comments.body}}</p>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <button class="reply" type="submit" name="Reply" value="{{comments.id}}" onclick='scrollReply();'>⤷ Reply</button>
+                </form>
+                {% for reply in comments.replies.all%}
+                <div style="width: 89% ;background-color: transparent; padding: 0px;margin: 0px 0px 0px 10%;border-radius: 10px;">
+                    <h3 id="replyh3-{{reply.id}}">{{reply.name}} - <small>{{reply.date_added}}</small></h3> 
+                    <div id="replydiv-{{reply.id}}" style="width: 100%;background-color: #2f3b4bb0; padding: 10px 0px 10px 5px;margin: 0px 0px 0px 5px;border-radius: 10px;">
+                        <p id="replyp-{{reply.id}}" style="font-size: 15px;text-align: left;margin: 0px 5px 0px 5px;">{{reply.reply}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endfor %}
+        {% endif%}
+        </div>
+        <hr>
+        {% if reply == True %}
+        <h2>Reply to {{comment_id.name}}</h2>
+        <form method="post" id="reply_form">
+            {% csrf_token %}
+            <h3>Name:</h3>
+            {{ reply_form.name }}
+            <h3>Reply:</h3>
+            {{ reply_form.reply }}
+            <br>
+            <button id="id_rsubmit" style="padding: 5px 15px 5px 15px; margin: 3px; background-color: #3b7cb9;font-family: 'Heebo', sans-serif;color: #ffffff;font-size: 15px;border: #1fb5cf 2px solid;border-radius:10px;" type="submit" name="Submit" value="{{comment_id.id}}">Submit</button>
+        </form>
+        <form method="post">
+            {% csrf_token %}
+            <button id="id_rcancel" style="padding: 5px 15px 5px 15px; margin: 3px; background-color: #9c9c9c;font-family: 'Heebo', sans-serif;color: #ffffff;font-size: 15px;border: #494949 2px solid;border-radius:10px;" type="submit" name="Cancel" value="{{comment_id.id}}">Cancel</button>
+        </form>
+        {% else %}
+        <h2>Add Comments</h2>
+        <form method="post" id="comment_form">
+            {% csrf_token %}
+            <h3>Name:</h3>
+            {{ comment_form.name }}
+            <h3>Body:</h3>
+            {{ comment_form.body }}
+            <br>
+            <button id="id_csubmit" style="padding: 5px 15px 5px 15px; margin: 3px; background-color: #3b7cb9;font-family: 'Heebo', sans-serif;color: #ffffff;font-size: 15px;border: #1fb5cf 2px solid;border-radius:10px;" type="submit" name="Submit" value="{{comment_id.id}}">Submit</button>
+        </form>
+        {% endif %}
+    </section>
+    <footer class="footer">
+
+        <p>Copyright © Daniel Vian.</p>
+    </footer>
+</body>
+<script type="text/javascript" src="{% static 'java/jquery-3.7.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'java/script.js' %}"></script>
+
+</html>
